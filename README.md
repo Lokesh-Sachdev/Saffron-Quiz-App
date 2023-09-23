@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Saffron Quiz Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/Lokesh-Sachdev/Saffron-Quiz-App/assets/109384819/3c62bfe0-8508-4b22-a316-d779a6421d86)
+![image](https://github.com/Lokesh-Sachdev/Saffron-Quiz-App/assets/109384819/e0476631-4511-4a2d-be4c-7b66ee24a063)
+![image](https://github.com/Lokesh-Sachdev/Saffron-Quiz-App/assets/109384819/411ae717-216b-426a-b76f-783961f4bcf0)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This Frontend Quiz Application is a web-based quiz platform built using React. It allows users to take quizzes with randomized questions and answer options, providing an engaging and interactive learning experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The application was developed as part of a front-end development assignment and includes features such as randomized questions, smooth transitions, progress tracking, score calculation, error handling, and code comments for clarity.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Randomized questions and answer options for each quiz session.
+- Smooth transitions and animations for an engaging user experience.
+- Progress bar to track quiz completion.
+- Score tracking and the option to retake the quiz.
+- Error handling and code comments for clarity.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: The application is built using the React library for building user interfaces.
+- **SCSS**: Styling is done using SCSS for better CSS organization.
+- **React Icons**: Used for displaying icons like the back arrow.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the application locally, follow these steps:
 
-### `npm run eject`
+1. Clone the GitHub repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone [repository-url]
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd frontend-quiz-app
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install the project dependencies:
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once the project dependencies are installed, you can start the application with the following command:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application will be available at `http://localhost:3000/`. You can access it through your web browser.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application is deployed using Netlify and can be accessed online at [Deployed Application Link](https://frolicking-genie-506e38.netlify.app/).
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore the code, and provide feedback. If you have any questions or need assistance, please don't hesitate to reach out.
