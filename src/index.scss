@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+// Variables
+$blue: #0f46ff;
+$btn-blue: #2057fd;
+$white: #fff;
+$font-stack: 'Open Sans', sans-serif;
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%button-styles {
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+
+  background-color: $btn-blue;
+  color: $white;
+  cursor: pointer;
+
+  & :active {
+    background-color: #ddd;
+    color: $blue;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-color: rgb(216, 220, 234);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 300px;
+  height: 600px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(15, 70, 255, 0.3) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: $white;
+
+  font-family: $font-stack;
+
+  .home__page {
+    @extend %flex-column;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    h1 {
+      color: $blue;
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      @extend %button-styles;
+      margin-top: 1rem
+    }
+  }
+
+  .score__section {
+    @extend %flex-column;
+    gap: 2rem;
+    font-size: 24px;
+
+    button {
+      @extend %button-styles;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .fade-out {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .question__section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @extend %flex-column;
+    align-items: flex-start;
+
+    background-color: $white;
+    padding: 30px 20px 0;
+    transform-origin: bottom center;
+    pointer-events: none;
+
+    .question__count {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+
+      span:first-child {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        cursor: pointer;
+      }
+
+      span:last-child {
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+
+    .progress__bar {
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 2.5rem;
+      position: relative;
+
+
+      .progress__indicator {
+        height: 5px;
+        background-color: $blue;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+
+    .question__text {
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    p {
+      margin: auto 0 2rem;
+      font-size: 14px;
+    }
+  }
+
+  .answer__section {
+    width: 100%;
+    min-height: 18rem;
+    padding: 1rem 0;
+
+    @extend %flex-column;
+    justify-content: center;
+
+    background: $blue;
+    overflow: hidden;
+
+    .answer__section-btns {
+      width: 100%;
+      @extend %flex-column;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+      button {
+        width: 85%;
+        line-height: 3rem;
+        background-color: $btn-blue;
+        color: $white;
+
+        font: bold 14px/3rem $font-stack;
+        text-align: left;
+
+        border: 0;
+        box-shadow: -4px 0px 0px $white;
+        outline: transparent;
+
+        margin-bottom: 10px;
+        padding-left: 1rem;
+
+        position: relative;
+        overflow: hidden;
+
+        background-image: linear-gradient(90deg, white 0%, white 0%);
+        background-repeat: no-repeat;
+        background-size: 0% 100%;
+        transition: background-size 0.75s ease;
+
+        cursor: pointer;
+
+        &:hover {
+          background-size: 100% 100%;
+          color: $blue;
+        }
+
+        span {
+          font-weight: normal;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
